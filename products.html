@@ -21,17 +21,32 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a id="nombre" class="py-2 d-none d.d-md-inline-block" href="my-profile.html"></a>
       </div>
     </nav>
      <main role="main" class="pb-5">
         <div class="text-center p-4">
             <h2>Productos</h2>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="list-group" id="cat-list-container">
-                </div>
-            </div>
+        <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+          Buscar producto: <input type="search" id="buscador" ><br><br> <button onclick="search()"> Buscar </button> 
+          <label for="asc" class="btn btn-light active" id="asc"  >
+          <input type="radio" id="asc"  autocomplete="off" checked >Ascendente
+          </label>
+          <label for="desc" class="btn btn-light active" id="desc"  >
+          <input type="radio" id="desc" autocomplete="off" class="form-chek-input" autocomplete="off" >Descendente
+          </label>
+          <label for="rele" class="btn btn-light active" id="rele"  >
+          <input type="radio" autocomplete="off" class="form-chek-input" autocomplete="off" >Relevancia
+          </label>
+          <label> Minimo <input type="number" id="min"></label><label>Maximo<input type="number" id="max"></label> <br><br>
+          <button class="btn btn-light" id="filtro" onclick="filtrar()" > Filtrar </button> 
+        </div>
+    
+        <div class="row">
+          <div id="cat-list-container" class="container">  
+                   
+          </div>
         </div>
     </main>
     <footer class="text-muted bg-light">

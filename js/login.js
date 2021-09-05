@@ -38,6 +38,8 @@ function verificar(){
 
         location.href ="home.html";
 
+        usuario.nombre = info.value;
+        usuario.estado ="conectado";
 
         localStorage.setItem('usuario',JSON.stringify(usuario)); 
         
@@ -50,7 +52,8 @@ function verificar(){
 
 
 
-document.addEventListener("DOMContentLoaded", function(e){
+document.addEventListener("DOMContentLoaded", ()=>{
+  
 
 });
 
