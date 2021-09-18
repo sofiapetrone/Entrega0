@@ -18,6 +18,7 @@ function showProductsList(productsArray){
 
 
         htmlContentToAppend += `
+        <a href="product-info.html" class="list-group-item list-group-item-action">
         <div class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
@@ -49,7 +50,7 @@ document.getElementById("asc").addEventListener("click",() => {
 }) 
 
 document.getElementById("desc").addEventListener("click",() => {
-    ordenDesc();
+    ordenDesc(); 
 })
 
 document.getElementById("rele").addEventListener("click",() => {
@@ -58,7 +59,7 @@ document.getElementById("rele").addEventListener("click",() => {
         if (a.soldCount > b.soldCount){
             return 1;       
         }
-        if (a.soldCount < b.soldCount){
+        if (a.soldCount < b.soldCount){ 
             return -1;
         }else{
             return 0;
@@ -66,7 +67,7 @@ document.getElementById("rele").addEventListener("click",() => {
     });
     
     newArray = productsArray.reverse()
-    showProductsList(newArray)
+    showProductsList(newArray) 
 
 })
 
@@ -83,7 +84,7 @@ function ordenDesc(){
 
 }
 
-function ordenPrecios(){
+function ordenPrecios(){ 
 
     productsArray.sort((a,b)=>{
         if (a.cost > b.cost){
@@ -104,10 +105,10 @@ function filtrar(){
     max= document.getElementById("max").value
 
     if ((min != undefined) && (min != "") && (parseInt(min)) >= 0) {
-            min = parseInt(min);
+            min = parseInt(min); 
         }
         else {
-            min = undefined;
+            min = undefined; 
         }
     if ((max != undefined) && (max != "") && (parseInt(max)) >= 0) {
             max = parseInt(max);
@@ -120,10 +121,10 @@ function filtrar(){
 }
 
 function search(){
-    info = document.getElementById("buscador").value.toLowerCase()
+    info = document.getElementById("buscador").value.toLowerCase() 
     showProductsList(productsArray) 
     
-}
+} 
 
 
 

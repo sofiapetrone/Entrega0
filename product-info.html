@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -27,12 +28,79 @@
     </div>
   </nav>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <h3 id="productName"></h3>
+    <hr class="my-3">
+    <dl>
+      <dt>Descripción</dt>
+      <dd>
+        <p id="productDescription"></p>
+      </dd>
+
+      <dt>Costo</dt>
+      <dd>
+        <p id="productCurrency"> </p>
+      </dd>
+
+      <dt>Vendidos</dt>
+      <dd>
+        <p id="productSoldcount"></p>
+      </dd>
+
+      <dt>Productos relacionados </dt>
+      <dd>
+        <p id="productRelatedProducts"></p>
+      </dd>
+
+      <dt>Imagenes ilustrativas </dt>
+      <dd>
+        <p id="productImagesGallery"></p>
+      </dd>
+
+      <!-- Comentarios -->
+      <dt>Ultimos comentarios</dt>
+      <dd>
+        <p id="commentsProducts"></p>
+      </dd>
+      
+      <!-- Puntuacion-->
+      <div class="row justify-content-center">
+
+        <div class="checks">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <input  for="boton1" id="1" class="form-check-input" type="radio" name="check" value="1"><i class="fa-solid fa-check"></i>
+              <input for="boton2" id="2" class="form-check-input" type="radio" name="check" value="2"><i class="fa-solid fa-check"></i>
+              <input for="boton3" id="3" class="form-check-input" type="radio" name="check" value="3"><i class="fa-solid fa-user"></i>
+              <input for="boton4" id="4" class="form-check-input" type="radio" name="check" value="4" ><i class="fa-solid fa-check"></i>
+              <input for="boton5" id="5" class="form-check-input" type="radio" name="check" value="5" ><i class="fa-solid fa-check"></i>
+               
+          </div>
+        </div>
+      
     </div>
+      <!-- Caja para comentar -->
+      <dt>Compartinos tu opinion</dt>
+      <dd>
+      <div class="position-absolute">
+          
+        
+        <div >
+          <textarea id="cajatext" style="width: 700px; height: 50px;" placeholder ="Escribinos tu comentario..."></textarea>     
+          <button  class="btn btn-primary" style="width: 200px; height: 50px; margin-bottom: 1.1cm; " onclick="comentar();">Publicar</button>        
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+      </dd>
+
+
+
+
+  </div>
+  </dd>
+
+  </dl>
   </div>
   <footer class="text-muted">
     <div class="container">
@@ -51,10 +119,13 @@
       <div></div>
     </div>
   </div>
+
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+
 </body>
 
 </html>
