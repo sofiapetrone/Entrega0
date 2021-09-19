@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 
@@ -30,45 +31,40 @@
   <div class="container p-5">
     <h3 id="productName"></h3>
     <hr class="my-3">
-    
 
 
 
-      
-      <dd>
-        <p style="float: left; clear: left;"><img src="img/prod1_1.jpg" style="width: 11cm; "> </p>
-        <p style="padding-inline-start: 11.5cm; margin-bottom: 5cm; font-size: large;" > Potenciá tu actitud con Onix Joy que, además de destacarse por su diseño juvenil y moderno, te ofrecé
+
+
+    <dd>
+      <p style="float: left; clear: left;"><img src="img/prod1_1.jpg" style="width: 11cm;  "> </p>
+      <p style="padding-inline-start: 11.5cm;  font-size: larger; font-weight: bolder;" id="productCurrency"></p>
+      <p style="padding-inline-start: 11.5cm; font-size: large;"> Potenciá tu actitud con Onix Joy que, además de
+        destacarse por su diseño juvenil y moderno, te ofrecé
         una óptima autonomía, un desempeño equilibrado y el máximo confort interior.
         Ya sea un viaje largo o un simple paseo por la ciudad, el confort es uno de los puntos fuertes del Onix. Esta
         versión incluye aire acondicionado, asientos tapizados en tela y gran espacio interior que te garantiza el
         máximo confort. </p>
+      <p style="font-size: large; padding-inline-start: 11.5cm;" id="productSoldcount"></p>
 
-      </dd>
-      <dl style="padding: bottom 13px;">
-      <dt>Costo</dt>
+    </dd>
+
+    <dl>
+
       <dd>
-        <p style="font-size: large" id="productCurrency"> </p>
-      </dd>
-
-      <dt>Vendidos</dt>
-      <dd>
-        <p style="font-size: large" id="productSoldcount"></p>
-      </dd>
-
-
-
-      <dt>Imagenes ilustrativas </dt>
-      <dd>
-        <p id="productImagesGallery"></p>
-      </dd>
+        <p id="productImagesGallery"> </p>
+      </dd> <br>
 
       <!-- Comentarios -->
-      <dt>Ultimos comentarios</dt>
+      <dt style="text-align: center; font-size: 0.8cm; font-weight: bold;">Ultimos comentarios</dt>
       <dd>
         <p id="commentsProducts"></p>
       </dd>
 
       <!-- Puntuacion-->
+      <dt style="font-weight: bolder; font-size: 0.6cm;">Compartinos tu opinion <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_MeTWrj.json" background="transparent" speed="1"
+        style="width: 250px; height: 300px;" loop autoplay></lottie-player></dt>
+      
       <div class="estrellas">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <p class="Puntuacion">
@@ -88,7 +84,7 @@
 
 
       <!-- Caja para comentar -->
-      <dt>Compartinos tu opinion</dt>
+
       <dd>
         <div class="position-absolute">
 
@@ -99,6 +95,7 @@
             <button class="btn btn-primary" style="width: 200px; height: 50px; margin-bottom: 1.1cm; "
               onclick="comentar();">Publicar</button>
           </div>
+          <br>
 
           <h6>Productos que quizas te puedan interesar</h6>
           <div>
@@ -137,6 +134,9 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>></script>
+
 
 </body>
 

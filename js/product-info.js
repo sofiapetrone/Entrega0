@@ -22,7 +22,7 @@ function showImagesGallery(array){
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
             
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" >
+                 <img style="onmouseover="this.width=300;this.height=300;" class="img-fluid img-thumbnail" src="` +  imageSrc + `" >
             </div>
            
             
@@ -57,7 +57,9 @@ function showComments(commentaries){
     }     
     document.getElementById("commentsProducts").innerHTML =  comentarios;
 }
- //Funcion para comentar
+ 
+
+//Funcion para comentar
 function comentar() {
   
 //Le agrego el valor de la caja de comentarios
@@ -78,8 +80,9 @@ function comentar() {
     user: nombre,
     dateTime: fechaComment,
   });
-
   showComments(commentaries);
+  Enviado();
+  
 
   
 }
@@ -97,6 +100,16 @@ function showChecks(valor) {
   }
   return estrella;
 }
+
+function Enviado(){
+  Swal.fire({
+      title: 'Envio exitoso',
+      text: 'Gracias por compartirnos tu opinion!',
+      icon: 'success',
+      confirmButtonText: 'Continuar'
+    })
+}
+
 
 
 
@@ -130,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                 productNameHTML.innerHTML = product.name;
                 //productDescriptionHTML.innerHTML = product.description;
                 productCurrencyHTML.innerHTML = product.currency + ` ` + product.cost;
-                productSoldcountHTML.innerHTML = product.soldCount;
+                productSoldcountHTML.innerHTML = "Unidades vendidas:" + ` ` + product.soldCount;
                 //productCategoryHTML.innerHTML = product.category;
                 //productRelatedproductsHTML.innerHTML = product.relatedProducts;
     
