@@ -13,7 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -30,26 +30,32 @@
   <div class="container p-5">
     <h3 id="productName"></h3>
     <hr class="my-3">
-    <dl>
-      <dt>Descripción</dt>
-      <dd>
-        <p id="productDescription"></p>
-      </dd>
+    
 
+
+
+      
+      <dd>
+        <p style="float: left; clear: left;"><img src="img/prod1_1.jpg" style="width: 11cm; "> </p>
+        <p style="padding-inline-start: 11.5cm; margin-bottom: 5cm; font-size: large;" > Potenciá tu actitud con Onix Joy que, además de destacarse por su diseño juvenil y moderno, te ofrecé
+        una óptima autonomía, un desempeño equilibrado y el máximo confort interior.
+        Ya sea un viaje largo o un simple paseo por la ciudad, el confort es uno de los puntos fuertes del Onix. Esta
+        versión incluye aire acondicionado, asientos tapizados en tela y gran espacio interior que te garantiza el
+        máximo confort. </p>
+
+      </dd>
+      <dl style="padding: bottom 13px;">
       <dt>Costo</dt>
       <dd>
-        <p id="productCurrency"> </p>
+        <p style="font-size: large" id="productCurrency"> </p>
       </dd>
 
       <dt>Vendidos</dt>
       <dd>
-        <p id="productSoldcount"></p>
+        <p style="font-size: large" id="productSoldcount"></p>
       </dd>
 
-      <dt>Productos relacionados </dt>
-      <dd>
-        <p id="productRelatedProducts"></p>
-      </dd>
+
 
       <dt>Imagenes ilustrativas </dt>
       <dd>
@@ -61,49 +67,55 @@
       <dd>
         <p id="commentsProducts"></p>
       </dd>
-      
-      <!-- Puntuacion-->
-      <div class="row justify-content-center">
 
-        <div class="checks">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <input  for="boton1" id="1" class="form-check-input" type="radio" name="check" value="1"><i class="fa-solid fa-check"></i>
-              <input for="boton2" id="2" class="form-check-input" type="radio" name="check" value="2"><i class="fa-solid fa-check"></i>
-              <input for="boton3" id="3" class="form-check-input" type="radio" name="check" value="3"><i class="fa-solid fa-user"></i>
-              <input for="boton4" id="4" class="form-check-input" type="radio" name="check" value="4" ><i class="fa-solid fa-check"></i>
-              <input for="boton5" id="5" class="form-check-input" type="radio" name="check" value="5" ><i class="fa-solid fa-check"></i>
-               
-          </div>
+      <!-- Puntuacion-->
+      <div class="estrellas">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <p class="Puntuacion">
+            <input id="radio1" type="radio" name="estre" value="1">
+            <label for="radio1" class="fas fa-star"></label>
+            <input id="radio2" type="radio" name="estre" value="2">
+            <label for="radio2" class="fas fa-star"></label>
+            <input id="radio3" type="radio" name="estre" value="3">
+            <label for="radio3" class="fas fa-star"></label>
+            <input id="radio4" type="radio" name="estre" value="4">
+            <label for="radio4" class="fas fa-star"></label>
+            <input id="radio5" type="radio" name="estre" value="5">
+            <label for="radio5" class="fas fa-star"></label>
+          </p>
         </div>
-      
-    </div>
+      </div>
+
+
       <!-- Caja para comentar -->
       <dt>Compartinos tu opinion</dt>
       <dd>
-      <div class="position-absolute">
-          
-        
-        <div >
-          <textarea id="cajatext" style="width: 700px; height: 50px;" placeholder ="Escribinos tu comentario..."></textarea>     
-          <button  class="btn btn-primary" style="width: 200px; height: 50px; margin-bottom: 1.1cm; " onclick="comentar();">Publicar</button>        
-        </div>
+        <div class="position-absolute">
 
-      </div>
-    </div>
 
+          <div>
+            <textarea id="cajatext" style="width: 700px; height: 50px;"
+              placeholder="Escribinos tu comentario..."></textarea>
+            <button class="btn btn-primary" style="width: 200px; height: 50px; margin-bottom: 1.1cm; "
+              onclick="comentar();">Publicar</button>
+          </div>
+
+          <h6>Productos que quizas te puedan interesar</h6>
+          <div>
+
+            <img src="img/car1.jpg" style="width: 5cm; "> <img src="img/car3.jpg" style="width: 5cm; ">
+
+
+
+    </dl>
   </div>
-      </dd>
 
 
 
 
-  </div>
-  </dd>
 
-  </dl>
-  </div>
   <footer class="text-muted">
-    <div class="container">
+    <div class="container" style="margin-top: 3cm;">
       <p class="float-right">
         <a href="#">Volver arriba</a>
       </p>

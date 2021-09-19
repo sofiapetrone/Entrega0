@@ -2,6 +2,7 @@ var comments = "";
 var commentaries = "";
 var comentarios = "";
 var puntaje = "";
+let estrellas = 0;
 var hoy = new Date();
 var fechaComment = (hoy.getFullYear()+"-"+(hoy.getMonth()+1)+"-"+hoy.getDay()+" "+hoy.getHours()+":"+hoy.getMinutes()+":"+hoy.getSeconds());
 let usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -20,8 +21,8 @@ function showImagesGallery(array){
 
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
+            
+                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" >
             </div>
            
             
@@ -37,7 +38,7 @@ function showImagesGallery(array){
 
 
 
-//Funcion comentarios
+//Funcion muestra comentarios
 function showComments(commentaries){    
     let comentarios = "";
     for(comments of commentaries){
@@ -56,42 +57,48 @@ function showComments(commentaries){
     }     
     document.getElementById("commentsProducts").innerHTML =  comentarios;
 }
-
+ //Funcion para comentar
 function comentar() {
+  
 //Le agrego el valor de la caja de comentarios
   comments = document.getElementById("cajatext").value;
   
 
   //Si el valor esta seleccionado, ese va a ser mi valor
-  for (let i = 1; i <=5; i++) {
-    if (document.getElementById(i).checked) {
-      puntaje = document.getElementById(i).value;
+  document.getElementsByName("estre").forEach((check) => {
+    if (check.checked == true) {
+      estrellas = check.value;
     }
-  }
+  });
 
   // Le agrego al array el nuevo comentario
     commentaries.push({
-    score: puntaje,
+    score: estrellas,
     description: comments,
     user: nombre,
     dateTime: fechaComment,
   });
 
   showComments(commentaries);
+
+  
 }
+   
 
 // Calificacion
 function showChecks(valor) {
-  let checks = "";
-  for (let i = 1; i < 6; i++) {
+  let estrella = "";
+  for (let i = 1; i <=5; i++) {
     if (i <= valor) {
-      checks += `<i class="fa-solid fa-check" style="color: green"></i>`;
+      estrella += `<span class="fa fa-star checked"></span>`;
     } else {
-      checks += `<i class="fa-solid fa-check" style="color: grey"></i>`;
+      estrella += `<span class="fa fa-star"></span>`;
     }
   }
-  return checks;
+  return estrella;
 }
+
+
 
 
 
@@ -121,11 +128,11 @@ document.addEventListener("DOMContentLoaded", function(e){
                 let productRelatedproductsHTML = document.getElementById("productRelatedProducts")
             
                 productNameHTML.innerHTML = product.name;
-                productDescriptionHTML.innerHTML = product.description;
+                //productDescriptionHTML.innerHTML = product.description;
                 productCurrencyHTML.innerHTML = product.currency + ` ` + product.cost;
                 productSoldcountHTML.innerHTML = product.soldCount;
                 //productCategoryHTML.innerHTML = product.category;
-                productRelatedproductsHTML.innerHTML = product.relatedProducts;
+                //productRelatedproductsHTML.innerHTML = product.relatedProducts;
     
                 //Muestro las imagenes en forma de galería
                 showImagesGallery(product.images);
@@ -142,5 +149,3 @@ document.addEventListener("DOMContentLoaded", function(e){
             }
         });
     });
-
-  
