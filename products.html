@@ -20,28 +20,75 @@
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <a id="nombre" class="py-2 d-none d.d-md-inline-block" href="my-profile.html"></a>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="nombre"  href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="cart.html">Mi carrito</a>
+            <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+            <button class="btn btn-danger" onclick="desconectar();" >Desconectar</button> 
+          </div>
+        </div>
       </div>
     </nav>
      <main role="main" class="pb-5">
         <div class="text-center p-4">
             <h2>Productos</h2>
         </div>
+        
+      <div class="container">
+        <div class="input-group">
+         <input type="search" id="buscador" class="form-control" style="width:22cm" placeholder="Buscar productos, marcas y mas.."> 
+         <span class="input-group-btn"> <button  class="btn btn-light " onclick="search()"> Buscar </button> 
+         </span>
+        </div>
+      </div>
+        <br>
+        
+      
+      
+      <div class="container">
+        <div class="row">
+          <div class="col text-right">
         <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-          Buscar producto: <input type="search" id="buscador" ><br><br> <button onclick="search()"> Buscar </button> 
           <label for="asc" class="btn btn-light active" id="asc"  >
-          <input type="radio" id="asc"  autocomplete="off" checked >Ascendente
+            <input type="radio" id="asc"  autocomplete="off" checked >A-Z
           </label>
           <label for="desc" class="btn btn-light active" id="desc"  >
-          <input type="radio" id="desc" autocomplete="off" class="form-chek-input" autocomplete="off" >Descendente
+            <input type="radio" id="desc" autocomplete="off"  autocomplete="off" >Z-A
           </label>
           <label for="rele" class="btn btn-light active" id="rele"  >
-          <input type="radio" autocomplete="off" class="form-chek-input" autocomplete="off" >Relevancia
+            <input type="radio" autocomplete="off"  autocomplete="off" >Cant.
           </label>
-          <label> Minimo <input type="number" id="min"></label><label>Maximo<input type="number" id="max"></label> <br><br>
-          <button class="btn btn-light" id="filtro" onclick="filtrar()" > Filtrar </button> 
+          </div>
         </div>
+      </div>
+    </div>
+            
+            <div class="row justify-content-end">
+              <div class="col-md-6"></div>
+                <div class="col-md-6 col-sm-12 mb-1 container">
+                  <div class="row container p-0 m-0">
+                    <div class="col">
+                      <p class="font-weight-normal text-right my-2">Precio.</p>
+                    </div>
+                    <div class="col">
+                      
+                    
+          <input class="form-control" type="number" placeholder="min." id="min"> </div>
+          <div class="col">
+          <input class="form-control" type="number" placeholder="max."id="max"> </div>
+          <div class="col-3 p-0">
+            <div class="btn-group" role="group">
+          <button class="btn btn-light btn-block" id="filtro" onclick="filtrar()" > Filtrar </button> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
     
         <div class="row">
           <div id="cat-list-container" class="container">  

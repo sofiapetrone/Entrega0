@@ -43,7 +43,6 @@ var getJSONData = function(url){
 
     function desconectar(){ 
     localStorage.clear(); 
-    signOut();
     location.href="index.html"; 
     }
 

@@ -24,8 +24,16 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="nombre" class="py-2 d-none d.d-md-inline-block" href="my-profile.html"></a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="nombre"  href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <button class="btn btn-danger" onclick="desconectar();" >Desconectar</button> 
+        </div>
+      </div>
     </div>
   </nav>
   <div class="container p-5">
@@ -37,35 +45,28 @@
 
 
     <dd>
-      <p style="float: left; clear: left;"><img src="img/prod1_1.jpg" style="width: 11cm;  "> </p>
-      <p style="padding-inline-start: 11.5cm;  font-size: larger; font-weight: bolder;" id="productCurrency"></p>
-      <p style="padding-inline-start: 11.5cm; font-size: large;"> Potenciá tu actitud con Onix Joy que, además de
-        destacarse por su diseño juvenil y moderno, te ofrecé
-        una óptima autonomía, un desempeño equilibrado y el máximo confort interior.
-        Ya sea un viaje largo o un simple paseo por la ciudad, el confort es uno de los puntos fuertes del Onix. Esta
-        versión incluye aire acondicionado, asientos tapizados en tela y gran espacio interior que te garantiza el
-        máximo confort. </p>
-      <p style="font-size: large; padding-inline-start: 11.5cm;" id="productSoldcount"></p>
+      <p id="productImagesGallery" style="float: left; clear: left; width:16cm"> </p>
+      <p style="padding-inline-start: 16.5cm;  font-size: 1.3cm; font-weight: bolder;" id="productCurrency"></p>
+      <p style="padding-inline-start: 16.5cm; font-size: large;" id="productDescription"> </p>
+      <p style="font-size: large; padding-inline-start: 16.5cm;" id="productSoldcount"></p>
 
     </dd>
+    <br><br>
 
     <dl>
 
-      <dd>
-        <p id="productImagesGallery"> </p>
-      </dd> <br>
 
       <!-- Comentarios -->
-      <dt style="text-align: center; font-size: 0.8cm; font-weight: bold;">Ultimos comentarios</dt>
+      <dt style="text-align: center; font-size: 0.7cm; font-weight: bold;">Opiniones sobre el pr0ducto</dt><br>
       <dd>
         <p id="commentsProducts"></p>
       </dd>
 
       <!-- Puntuacion-->
-      <dt style="font-weight: bolder; font-size: 0.6cm;">Compartinos tu opinion <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_MeTWrj.json" background="transparent" speed="1"
+      <dt style="font-weight: bolder; font-size: 0.6cm;">¡Compartinos la tuya! <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_MeTWrj.json" background="transparent" speed="1"
         style="width: 250px; height: 300px;" loop autoplay></lottie-player></dt>
       
-      <div class="estrellas">
+      <div class="estrella">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <p class="Puntuacion">
             <input id="radio1" type="radio" name="estre" value="1">
@@ -85,22 +86,27 @@
 
       <!-- Caja para comentar -->
 
-      <dd>
+      
         <div class="position-absolute">
 
 
-          <div>
+          <div class="input-group">
             <textarea id="cajatext" style="width: 700px; height: 50px;"
               placeholder="Escribinos tu comentario..."></textarea>
+              <span class="input-group-btn">&nbsp;
             <button class="btn btn-primary" style="width: 200px; height: 50px; margin-bottom: 1.1cm; "
               onclick="comentar();">Publicar</button>
+              </span>
+            </div>
           </div>
-          <br>
+          <br><br><br><br><br><br><br>
 
-          <h6>Productos que quizas te puedan interesar</h6>
           <div>
+           <h5 style="font-weight:bolder;">Quienes vieron este producto también compraron</h5>
+          <p style="width: 8cm" id="productRelated"></p>
+          </div>
 
-            <img src="img/car1.jpg" style="width: 5cm; "> <img src="img/car3.jpg" style="width: 5cm; ">
+           
 
 
 
@@ -134,7 +140,6 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>></script>
 
 
