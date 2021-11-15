@@ -27,7 +27,10 @@
         font-size: 3.5rem;
       }
     }
+     
+    
   </style>
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
@@ -52,14 +55,160 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="text-center p-4"> 
+    <h2>Mi Carrito</h2>
+  </div>
+    <br><br>
+    <div  id="carrito" class="precios">  
+    </div>
+    <br> <br>
+      <!--MODAL-->
+      <div style="margin-left: 8cm;">
+      <p  style="font-size: large;">Seleccione un metodo de pago:</p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Seleccionar
+</button>
+<!-- Modal cuerpo-->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Metodo de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  class="needs-validation" novalidate>
+          <div class="panel panel-default">
+           <div class="panel-heading">
+            <h5>Tarjeta de credito</h5> 
+                <div class="row ">
+                        <div class="col-md-12">
+                          <label for="validationCustom01"></label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Numero de tarjeta" required />
+                        </div>
+                        <div class="valid-feedback">
+                         Correcto
+                        </div>
+                    </div>
+                    <br>
+               <div class="row ">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted small-font" > Mes a vencer</span>
+                            <label for="validationCustom02"></label>
+                            <input type="text" class="form-control" placeholder="MM" id="validationCustom02" required />
+                        </div>
+                        <div class="valid-feedback">
+                          Correcto
+                        </div>
+                   <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted small-font" > Año a vencer</span>
+                            <label for="validationCustom03"></label>
+                            <input type="text" class="form-control" placeholder="YY" id="validationCustom03" required/>
+                        </div>
+                        <div class="valid-feedback">
+                          Correcto
+                        </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted small-font" > CCV</span>
+                            <br>
+                            <label for="validationCustom04"></label>
+                            <input type="text" class="form-control" placeholder="CCV" id="validationCustom04" required/>
+                        </div>
+                        <div class="valid-feedback">
+                          Correcto
+                        </div>
+                    </div>
+                    <br>
+               <div class="row ">
+                        <div class="col-md-12 pad-adjust">
+                          <label for="validationCustom05"></label>
+                        <input type="text" class="form-control" placeholder="Nombre del propietario" id="validationCustom05" required />
+                        </div>
+                        <div class="valid-feedback">
+                          Correcto
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                      
+                   <h5>Paypal</h5> 
+                   <br>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                      <input type="hidden" name="cmd" value="_s-xclick">
+                      <input type="hidden" name="hosted_button_id" value="UDWVYVRB6M5VA">
+                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                      <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                      </form>
+                      <br> <br>
+                      <button class="btn btn-primary" type="submit" style="right: auto;">Guardar datos</button>
+                 
+               
+                             </div>
+                        </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Pagar</button>
+      </div>
     </div>
   </div>
+</div>
+</div>
+<br> <br>
+<div>
+  <p  style="font-size: large;">Elige donde recibir la compra:</p>
+    <form class="px-4 py-3">
+      <div class="form-group">
+        <label for="direccionEnvio">Direccion</label>
+        <input style="width: min-content" type="text" class="form-control" id="direccionEnvio" >
+      </div>
+      <div class="form-group">
+        <label for="calleEnvio">Calle</label>
+        <input style="width: min-content" type="text" class="form-control" id="calleEnvio" >
+      </div>
+      <div class="form-group">
+        <label for="numeroEnvio">Numero</label>
+        <input style="width: min-content" type="number" class="form-control" id="numeroEnvio" >
+      </div>
+      <div class="form-group">
+        <label for="esquinaEnvio">Esquina</label>
+        <input style="width: min-content" type="text" class="form-control" id="numeroEnvio" >
+      </div>
+      <div class="form-group">
+        <label for="aclaracionEnvio">Aclaracion</label>
+        <textarea style="width: 7cm" type="text" class="form-control" id="aclaracionEnvio" > </textarea>
+      </div>
+      
+      </div>
+    </form>
+</div>
+<div style="margin-left: 8cm;">
+<p  style="font-size: large;">Seleccione tipo de envio:</p>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active" onclick="sumar()">
+      <input type="radio" name="options" id="primerEnvio" autocomplete="off" checked > Premium (2-5 dias) 
+    </label>
+    <label class="btn btn-secondary" onclick="sumar()">
+      <input type="radio" name="options" id="segundoEnvio" autocomplete="off" > Express (5-8 dias)
+    </label>
+    <label class="btn btn-secondary" onclick="sumar()">
+      <input type="radio" name="options" id="tercerEnvio" autocomplete="off" > Standard (12-15 dias)
+    </label>
+  </div>
+  <span id="precioEnvio"> </span>
+</div>
+  <br>
+       <span style="font-size: 0.8cm; font-family: inherit; font-weight: 4px; margin-left: 8cm;" > Total a pagar: $ <span id="sum"></span></span>
+  </div>
+</div>
+
+  
+    
+  
+ 
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
